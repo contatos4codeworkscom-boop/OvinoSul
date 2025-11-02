@@ -1,0 +1,283 @@
+/* Modern Drawer Menu - Mobile Navigation */
+
+.drawer-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 9998;
+}
+
+.drawer-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.drawer-menu {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 65vh;
+    background: linear-gradient(to bottom, #ffffff 0%, #f8fafc 100%);
+    border-radius: 24px 24px 0 0;
+    box-shadow: 0 -8px 32px rgba(0, 0, 0, 0.12);
+    transform: translateY(100%);
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.drawer-menu.active {
+    transform: translateY(0);
+}
+
+.drawer-handle {
+    width: 100%;
+    padding: 16px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: grab;
+    touch-action: pan-y;
+}
+
+.drawer-handle:active {
+    cursor: grabbing;
+}
+
+.drawer-handle-bar {
+    width: 48px;
+    height: 4px;
+    background: #cbd5e1;
+    border-radius: 2px;
+    transition: background 0.2s ease;
+}
+
+.drawer-menu.active .drawer-handle-bar {
+    background: #94a3b8;
+}
+
+.drawer-header {
+    padding: 0 24px 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.drawer-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: #0f172a;
+    letter-spacing: -0.02em;
+}
+
+.drawer-close {
+    width: 36px;
+    height: 36px;
+    border: none;
+    background: #f1f5f9;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.drawer-close:hover {
+    background: #e2e8f0;
+    transform: scale(1.05);
+}
+
+.drawer-close:active {
+    transform: scale(0.95);
+}
+
+.drawer-close svg {
+    width: 20px;
+    height: 20px;
+    stroke: #475569;
+}
+
+.drawer-content {
+    flex: 1;
+    overflow-y: auto;
+    padding: 8px 16px 24px;
+    -webkit-overflow-scrolling: touch;
+}
+
+.drawer-nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.drawer-nav-item {
+    margin-bottom: 4px;
+}
+
+.drawer-nav-link {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px 16px;
+    color: #334155;
+    text-decoration: none;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.drawer-nav-link::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: #2563eb;
+    transform: scaleY(0);
+    transition: transform 0.2s ease;
+}
+
+.drawer-nav-link:hover,
+.drawer-nav-link:active {
+    background: #f1f5f9;
+    color: #2563eb;
+    transform: translateX(4px);
+}
+
+.drawer-nav-link:hover::before,
+.drawer-nav-link.active::before {
+    transform: scaleY(1);
+}
+
+.drawer-nav-link.active {
+    background: #eff6ff;
+    color: #2563eb;
+    font-weight: 600;
+}
+
+.drawer-nav-icon {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+}
+
+.drawer-nav-icon svg {
+    width: 100%;
+    height: 100%;
+    stroke: currentColor;
+}
+
+.drawer-nav-text {
+    flex: 1;
+}
+
+.drawer-nav-badge {
+    background: #2563eb;
+    color: white;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 2px 8px;
+    border-radius: 12px;
+    line-height: 1.6;
+}
+
+/* Hamburger Menu Button - Modern Design */
+.mobile-menu-toggle {
+    display: none;
+    width: 44px;
+    height: 44px;
+    border: none;
+    background: transparent;
+    padding: 0;
+    cursor: pointer;
+    position: relative;
+    z-index: 10;
+}
+
+.hamburger {
+    width: 24px;
+    height: 18px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: auto;
+}
+
+.hamburger span {
+    display: block;
+    height: 2px;
+    background: #0f172a;
+    border-radius: 2px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transform-origin: center;
+}
+
+.mobile-menu-toggle.active .hamburger span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.mobile-menu-toggle.active .hamburger span:nth-child(2) {
+    opacity: 0;
+    transform: scaleX(0);
+}
+
+.mobile-menu-toggle.active .hamburger span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+/* Hide on Desktop */
+@media (min-width: 769px) {
+    .drawer-menu,
+    .drawer-overlay,
+    .mobile-menu-toggle {
+        display: none !important;
+    }
+}
+
+/* Show on Mobile/Tablet */
+@media (max-width: 768px) {
+    .mobile-menu-toggle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+/* Smooth scrolling for drawer content */
+.drawer-content {
+    scroll-behavior: smooth;
+}
+
+.drawer-content::-webkit-scrollbar {
+    width: 6px;
+}
+
+.drawer-content::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.drawer-content::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 3px;
+}
+
+.drawer-content::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+}

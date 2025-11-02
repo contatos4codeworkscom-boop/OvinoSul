@@ -17,8 +17,12 @@
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     
     <!-- Stylesheets -->
+    <link rel="stylesheet" href="modern-globals.css">
+    <link rel="stylesheet" href="modern-animations.css">
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="modern-navigation.css">
+    <link rel="stylesheet" href="modern-header.css">
+    <link rel="stylesheet" href="drawer-menu.css">
+    <link rel="stylesheet" href="advanced-search.css">
     <link rel="stylesheet" href="hero.css">
     <link rel="stylesheet" href="features.css">
     <link rel="stylesheet" href="buttons.css">
@@ -81,171 +85,208 @@
     <!-- Skip to main content for accessibility -->
     <a href="#main" class="skip-link" aria-label="Pular para o conteúdo principal">Pular para o conteúdo</a>
     
-    <!-- Modern Navigation -->
-    <nav class="modern-navigation" role="navigation" aria-label="Navegação principal">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <h1>OvinoSul</h1>
+    <!-- Modern Header -->
+    <header class="modern-header">
+        <div class="header-container">
+            <a href="index.html" class="header-logo">
+                <div class="header-logo-icon">🐑</div>
+                <span class="header-logo-text">OvinoSul</span>
+            </a>
+            
+            <nav class="header-nav" role="navigation" aria-label="Navegação principal">
+                <ul class="header-nav-list">
+                    <li class="header-nav-item">
+                        <a href="index.html" class="header-nav-link active">
+                            <div class="header-nav-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                                    <polyline points="9,22 9,12 15,12 15,22"/>
+                                </svg>
+                            </div>
+                            Home
+                        </a>
+                    </li>
+                    <li class="header-nav-item">
+                        <a href="racas.html" class="header-nav-link">
+                            <div class="header-nav-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M12 2c-1.5 0-3 1-3 3v2c0 1 .5 2 1.5 2.5L12 11l1.5-1.5c1-.5 1.5-1.5 1.5-2.5V5c0-2-1.5-3-3-3z"/>
+                                    <path d="M12 11c-3 0-5.5 2-7 5 1.5 3 4 5 7 5s5.5-2 7-5c-1.5-3-4-5-7-5z"/>
+                                    <circle cx="12" cy="16" r="3"/>
+                                </svg>
+                            </div>
+                            Raças
+                        </a>
+                    </li>
+                    <li class="header-nav-item">
+                        <a href="vacinas.html" class="header-nav-link">
+                            <div class="header-nav-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                                    <line x1="16" y1="2" x2="16" y2="6"/>
+                                    <line x1="8" y1="2" x2="8" y2="6"/>
+                                    <line x1="3" y1="10" x2="21" y2="10"/>
+                                </svg>
+                            </div>
+                            Vacinas
+                        </a>
+                    </li>
+                    <li class="header-nav-item">
+                        <a href="#sobre" class="header-nav-link">
+                            <div class="header-nav-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"/>
+                                    <path d="m9,12 2,2 4-4"/>
+                                </svg>
+                            </div>
+                            Sobre
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            
+            <div class="header-actions">
+                <button class="header-search-btn" aria-label="Abrir busca">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.35-4.35"></path>
+                    </svg>
+                </button>
+                <button class="mobile-menu-toggle" aria-label="Abrir menu" aria-expanded="false">
+                    <div class="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </button>
             </div>
-            
-            <ul class="nav-menu">
-                <li class="nav-item">
-                    <a href="#home" class="nav-link active">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                            <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
-                            <polyline points="9,22 9,12 15,12 15,22"/>
-                        </svg>
-                        Home
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="racas.html" class="nav-link">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                            <path d="M12 2c-1.5 0-3 1-3 3v2c0 1 .5 2 1.5 2.5L12 11l1.5-1.5c1-.5 1.5-1.5 1.5-2.5V5c0-2-1.5-3-3-3z"/>
-                            <path d="M12 11c-3 0-5.5 2-7 5 1.5 3 4 5 7 5s5.5-2 7-5c-1.5-3-4-5-7-5z"/>
-                            <circle cx="12" cy="16" r="3"/>
-                        </svg>
-                        Raças
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="vacinas.html" class="nav-link">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
-                            <line x1="16" y1="2" x2="16" y2="6"/>
-                            <line x1="8" y1="2" x2="8" y2="6"/>
-                            <line x1="3" y1="10" x2="21" y2="10"/>
-                        </svg>
-                        Vacinas
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="#sobre" class="nav-link">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                            <circle cx="12" cy="12" r="10"/>
-                            <path d="m9,12 2,2 4-4"/>
-                        </svg>
-                        Sobre
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="#contato" class="nav-link">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-                            <polyline points="22,6 12,13 2,6"/>
-                        </svg>
-                        Contato
-                    </a>
-                </li>
-            </ul>
-            
-            <button class="mobile-menu-btn" aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="mobile-menu">
-                <span></span>
-                <span></span>
-                <span></span>
+        </div>
+    </header>
+    
+    <!-- Mobile Drawer Menu -->
+    <div class="drawer-overlay" aria-hidden="true"></div>
+    <div class="drawer-menu" role="dialog" aria-modal="true" aria-label="Menu de navegação" aria-hidden="true">
+        <div class="drawer-handle">
+            <div class="drawer-handle-bar"></div>
+        </div>
+        <div class="drawer-header">
+            <h2 class="drawer-title">Menu</h2>
+            <button class="drawer-close" aria-label="Fechar menu">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M18 6L6 18M6 6l12 12"></path>
+                </svg>
             </button>
         </div>
-        
-        <!-- Mobile Menu -->
-        <div class="mobile-menu" id="mobile-menu">
-            <ul class="mobile-menu-list">
-                <li class="mobile-menu-item">
-                    <a href="#home" class="mobile-menu-link">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                            <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
-                            <polyline points="9,22 9,12 15,12 15,22"/>
-                        </svg>
-                        Home
-                    </a>
-                </li>
-                <li class="mobile-menu-item">
-                    <a href="racas.html" class="mobile-menu-link">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                            <path d="M12 2c-1.5 0-3 1-3 3v2c0 1 .5 2 1.5 2.5L12 11l1.5-1.5c1-.5 1.5-1.5 1.5-2.5V5c0-2-1.5-3-3-3z"/>
-                            <path d="M12 11c-3 0-5.5 2-7 5 1.5 3 4 5 7 5s5.5-2 7-5c-1.5-3-4-5-7-5z"/>
-                            <circle cx="12" cy="16" r="3"/>
-                        </svg>
-                        Raças de Ovinos
-                    </a>
-                </li>
-                <li class="mobile-menu-item">
-                    <a href="vacinas.html" class="mobile-menu-link">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
-                            <line x1="16" y1="2" x2="16" y2="6"/>
-                            <line x1="8" y1="2" x2="8" y2="6"/>
-                            <line x1="3" y1="10" x2="21" y2="10"/>
-                        </svg>
-                        Calendário de Vacinas
-                    </a>
-                </li>
-                <li class="mobile-menu-item">
-                    <a href="#sobre" class="mobile-menu-link">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                            <circle cx="12" cy="12" r="10"/>
-                            <path d="m9,12 2,2 4-4"/>
-                        </svg>
-                        Sobre o Projeto
-                    </a>
-                </li>
-                <li class="mobile-menu-item">
-                    <a href="#contato" class="mobile-menu-link">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-                            <polyline points="22,6 12,13 2,6"/>
-                        </svg>
-                        Contato
-                    </a>
-                </li>
-                <li class="mobile-menu-item">
-                    <a href="#origem" class="mobile-menu-link">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                            <path d="M12 2L2 7l10 5 10-5-10-5z"/>
-                            <path d="M2 17l10 5 10-5"/>
-                            <path d="M2 12l10 5 10-5"/>
-                        </svg>
-                        Origem e História
-                    </a>
-                </li>
-                <li class="mobile-menu-item">
-                    <a href="#guias" class="mobile-menu-link">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                            <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>
-                            <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
-                        </svg>
-                        Guias Práticos
-                    </a>
-                </li>
-                <li class="mobile-menu-item">
-                    <a href="#recursos" class="mobile-menu-link">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                            <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
-                        </svg>
-                        Recursos
-                    </a>
-                </li>
-                <li class="mobile-menu-item">
-                    <a href="#produtores" class="mobile-menu-link">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
-                            <circle cx="9" cy="7" r="4"/>
-                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
-                            <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
-                        </svg>
-                        Para Produtores
-                    </a>
-                </li>
-                <li class="mobile-menu-item">
-                    <a href="#novidades" class="mobile-menu-link">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                            <polygon points="13,2 3,14 12,14 11,22 21,10 12,10 13,2"/>
-                        </svg>
-                        Novidades 2025
-                    </a>
-                </li>
-            </ul>
+        <div class="drawer-content">
+            <nav role="navigation">
+                <ul class="drawer-nav-list">
+                    <li class="drawer-nav-item">
+                        <a href="index.html" class="drawer-nav-link active">
+                            <div class="drawer-nav-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                                    <polyline points="9,22 9,12 15,12 15,22"/>
+                                </svg>
+                            </div>
+                            <span class="drawer-nav-text">Home</span>
+                        </a>
+                    </li>
+                    <li class="drawer-nav-item">
+                        <a href="racas.html" class="drawer-nav-link">
+                            <div class="drawer-nav-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M12 2c-1.5 0-3 1-3 3v2c0 1 .5 2 1.5 2.5L12 11l1.5-1.5c1-.5 1.5-1.5 1.5-2.5V5c0-2-1.5-3-3-3z"/>
+                                    <path d="M12 11c-3 0-5.5 2-7 5 1.5 3 4 5 7 5s5.5-2 7-5c-1.5-3-4-5-7-5z"/>
+                                    <circle cx="12" cy="16" r="3"/>
+                                </svg>
+                            </div>
+                            <span class="drawer-nav-text">Raças de Ovinos</span>
+                        </a>
+                    </li>
+                    <li class="drawer-nav-item">
+                        <a href="vacinas.html" class="drawer-nav-link">
+                            <div class="drawer-nav-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                                    <line x1="16" y1="2" x2="16" y2="6"/>
+                                    <line x1="8" y1="2" x2="8" y2="6"/>
+                                    <line x1="3" y1="10" x2="21" y2="10"/>
+                                </svg>
+                            </div>
+                            <span class="drawer-nav-text">Calendário de Vacinas</span>
+                        </a>
+                    </li>
+                    <li class="drawer-nav-item">
+                        <a href="#sobre" class="drawer-nav-link">
+                            <div class="drawer-nav-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"/>
+                                    <path d="m9,12 2,2 4-4"/>
+                                </svg>
+                            </div>
+                            <span class="drawer-nav-text">Sobre o Projeto</span>
+                        </a>
+                    </li>
+                    <li class="drawer-nav-item">
+                        <a href="#contato" class="drawer-nav-link">
+                            <div class="drawer-nav-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                    <polyline points="22,6 12,13 2,6"/>
+                                </svg>
+                            </div>
+                            <span class="drawer-nav-text">Contato</span>
+                        </a>
+                    </li>
+                    <li class="drawer-nav-item">
+                        <a href="#guias" class="drawer-nav-link">
+                            <div class="drawer-nav-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>
+                                    <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
+                                </svg>
+                            </div>
+                            <span class="drawer-nav-text">Guias Práticos</span>
+                        </a>
+                    </li>
+                    <li class="drawer-nav-item">
+                        <a href="#recursos" class="drawer-nav-link">
+                            <div class="drawer-nav-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+                                </svg>
+                            </div>
+                            <span class="drawer-nav-text">Recursos</span>
+                        </a>
+                    </li>
+                    <li class="drawer-nav-item">
+                        <a href="#produtores" class="drawer-nav-link">
+                            <div class="drawer-nav-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                                    <circle cx="9" cy="7" r="4"/>
+                                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                                    <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                                </svg>
+                            </div>
+                            <span class="drawer-nav-text">Para Produtores</span>
+                        </a>
+                    </li>
+                    <li class="drawer-nav-item">
+                        <a href="#novidades" class="drawer-nav-link">
+                            <div class="drawer-nav-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polygon points="13,2 3,14 12,14 11,22 21,10 12,10 13,2"/>
+                                </svg>
+                            </div>
+                            <span class="drawer-nav-text">Novidades 2025</span>
+                            <span class="drawer-nav-badge">Novo</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
         </div>
-    </nav>
+    </div>
 
     <main id="main" role="main">
         <section class="hero" id="home" role="banner">
@@ -448,9 +489,8 @@
     </style>
 
     <!-- Scripts -->
-    <script src="script.js"></script>
-    <script src="modern-navigation.js"></script>
-    <script src="advanced-scroll-controller.js"></script>
+    <script src="drawer-menu.js"></script>
+    <script src="advanced-search.js"></script>
     
     <!-- Service Worker Registration (optional) -->
     <script>
