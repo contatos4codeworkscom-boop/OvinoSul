@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demonstração - Nova Navegação OvinoSul</title>
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="hero.jpg" as="image">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"></noscript>
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="modern-navigation.css">
+    <link rel="stylesheet" href="hero.css">
+    <link rel="stylesheet" href="mobile.css">
+    
+    <style>
+        /* Demo specific styles */
+        .demo-section {
+            padding: 6rem 2rem;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        
+        .demo-section:nth-child(odd) {
+            background: var(--color-neutral-100);
+        }
+        
+        .demo-section:nth-child(even) {
+            background: var(--color-neutral-50);
+        }
+        
+        .demo-content {
+            max-width: 800px;
+        }
+        
+        .demo-title {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--color-text);
+            margin-bottom: 2rem;
+        }
+        
+        .demo-description {
+            font-size: 1.25rem;
+            color: var(--color-text-light);
+            line-height: 1.6;
+            margin-bottom: 3rem;
+        }
+        
+        .demo-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .demo-feature {
+            padding: 2rem;
+            background: white;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-md);
+            text-align: left;
+        }
+        
+        .demo-feature h3 {
+            color: var(--color-primary);
+            margin-bottom: 1rem;
+        }
+        
+        .demo-feature p {
+            color: var(--color-text-light);
+            line-height: 1.5;
+        }
+        
+        .demo-nav-info {
+            background: var(--color-primary);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: var(--radius-md);
+            margin-top: 2rem;
+        }
+        
+        .demo-nav-info h4 {
+            margin-bottom: 0.5rem;
+        }
+        
+        .demo-nav-info ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .demo-nav-info li {
+            margin: 0.25rem 0;
+            opacity: 0.9;
+        }
+        
+        @media (max-width: 768px) {
+            .demo-section {
+                padding: 4rem 1rem;
+            }
+            
+            .demo-title {
+                font-size: 2rem;
+            }
+            
+            .demo-description {
+                font-size: 1.125rem;
+            }
+            
+            .demo-features {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Skip to main content for accessibility -->
+    <a href="#main" class="skip-link" aria-label="Pular para o conteúdo principal">Pular para o conteúdo</a>
+    
+    <!-- Modern Navigation -->
+    <nav class="modern-navigation" role="navigation" aria-label="Navegação principal">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h1>OvinoSul</h1>
+            </div>
+            
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link active">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                            <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                            <polyline points="9,22 9,12 15,12 15,22"/>
+                        </svg>
+                        Home
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="racas.html" class="nav-link">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                            <path d="M12 2c-1.5 0-3 1-3 3v2c0 1 .5 2 1.5 2.5L12 11l1.5-1.5c1-.5 1.5-1.5 1.5-2.5V5c0-2-1.5-3-3-3z"/>
+                            <path d="M12 11c-3 0-5.5 2-7 5 1.5 3 4 5 7 5s5.5-2 7-5c-1.5-3-4-5-7-5z"/>
+                            <circle cx="12" cy="16" r="3"/>
+                        </svg>
+                        Raças
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="vacinas.html" class="nav-link">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                            <line x1="16" y1="2" x2="16" y2="6"/>
+                            <line x1="8" y1="2" x2="8" y2="6"/>
+                            <line x1="3" y1="10" x2="21" y2="10"/>
+                        </svg>
+                        Vacinas
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#sobre" class="nav-link">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                            <circle cx="12" cy="12" r="10"/>
+                            <path d="m9,12 2,2 4-4"/>
+                        </svg>
+                        Sobre
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contato" class="nav-link">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                            <polyline points="22,6 12,13 2,6"/>
+                        </svg>
+                        Contato
+                    </a>
+                </li>
+            </ul>
+            
+            <button class="mobile-menu-btn" aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobile-menu">
+            <ul class="mobile-menu-list">
+                <li class="mobile-menu-item">
+                    <a href="#home" class="mobile-menu-link">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                            <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                            <polyline points="9,22 9,12 15,12 15,22"/>
+                        </svg>
+                        Home
+                    </a>
+                </li>
+                <li class="mobile-menu-item">
+                    <a href="racas.html" class="mobile-menu-link">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                            <path d="M12 2c-1.5 0-3 1-3 3v2c0 1 .5 2 1.5 2.5L12 11l1.5-1.5c1-.5 1.5-1.5 1.5-2.5V5c0-2-1.5-3-3-3z"/>
+                            <path d="M12 11c-3 0-5.5 2-7 5 1.5 3 4 5 7 5s5.5-2 7-5c-1.5-3-4-5-7-5z"/>
+                            <circle cx="12" cy="16" r="3"/>
+                        </svg>
+                        Raças de Ovinos
+                    </a>
+                </li>
+                <li class="mobile-menu-item">
+                    <a href="vacinas.html" class="mobile-menu-link">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                            <line x1="16" y1="2" x2="16" y2="6"/>
+                            <line x1="8" y1="2" x2="8" y2="6"/>
+                            <line x1="3" y1="10" x2="21" y2="10"/>
+                        </svg>
+                        Calendário de Vacinas
+                    </a>
+                </li>
+                <li class="mobile-menu-item">
+                    <a href="#sobre" class="mobile-menu-link">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                            <circle cx="12" cy="12" r="10"/>
+                            <path d="m9,12 2,2 4-4"/>
+                        </svg>
+                        Sobre o Projeto
+                    </a>
+                </li>
+                <li class="mobile-menu-item">
+                    <a href="#contato" class="mobile-menu-link">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                            <polyline points="22,6 12,13 2,6"/>
+                        </svg>
+                        Contato
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <main id="main" role="main">
+        <!-- Hero Section -->
+        <section class="hero" id="home" role="banner">
+            <div class="hero-background">
+                <img src="hero.jpg" alt="Paisagem dos pampas gaúchos com rebanho de ovinos ao amanhecer" class="hero-image" loading="eager" decoding="async">
+                <div class="hero-overlay"></div>
+            </div>
+            
+            <div class="hero-content">
+                <div class="container">
+                    <div class="hero-text">
+                        <h1 class="hero-headline">Nova Navegação Moderna</h1>
+                        <p class="hero-subheadline">Demonstração da navegação moderna implementada no OvinoSul, substituindo o carrossel problemático por uma solução elegante e funcional.</p>
+                        
+                        <div class="hero-actions">
+                            <a href="#sobre" class="btn btn-primary">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                    <path d="M5 12h14"/>
+                                    <path d="M12 5l7 7-7 7"/>
+                                </svg>
+                                Explorar Melhorias
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sobre Section -->
+        <section class="demo-section" id="sobre">
+            <div class="demo-content">
+                <h2 class="demo-title">Melhorias Implementadas</h2>
+                <p class="demo-description">
+                    A nova navegação resolve os problemas identificados no carrossel automático, oferecendo uma experiência muito mais moderna e funcional.
+                </p>
+                
+                <div class="demo-features">
+                    <div class="demo-feature">
+                        <h3>🎯 Controle Total</h3>
+                        <p>O usuário tem controle completo sobre a navegação, sem elementos que se movem automaticamente e podem confundir.</p>
+                    </div>
+                    <div class="demo-feature">
+                        <h3>📱 Responsivo</h3>
+                        <p>Menu mobile elegante com animações suaves e navegação por teclado para acessibilidade total.</p>
+                    </div>
+                    <div class="demo-feature">
+                        <h3>✨ Moderno</h3>
+                        <p>Design com fundo transparente que se adapta ao scroll, criando uma experiência visual imersiva.</p>
+                    </div>
+                    <div class="demo-feature">
+                        <h3>⚡ Performance</h3>
+                        <p>Navegação otimizada com animações suaves e transições que respeitam as preferências do usuário.</p>
+                    </div>
+                </div>
+                
+                <div class="demo-nav-info">
+                    <h4>Características da Nova Navegação:</h4>
+                    <ul>
+                        <li>• Fundo transparente no topo, sólido ao rolar</li>
+                        <li>• Ícones intuitivos para cada seção</li>
+                        <li>• Menu mobile com hambúrguer animado</li>
+                        <li>• Navegação por teclado completa</li>
+                        <li>• Acessibilidade WCAG 2.1 AA</li>
+                        <li>• Animações suaves e responsivas</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contato Section -->
+        <section class="demo-section" id="contato">
+            <div class="demo-content">
+                <h2 class="demo-title">Resultados Alcançados</h2>
+                <p class="demo-description">
+                    A implementação da navegação moderna transformou completamente a experiência do usuário no site OvinoSul.
+                </p>
+                
+                <div class="demo-features">
+                    <div class="demo-feature">
+                        <h3>🚀 Usabilidade</h3>
+                        <p>Todas as opções de navegação estão sempre visíveis e acessíveis, eliminando a frustração do carrossel.</p>
+                    </div>
+                    <div class="demo-feature">
+                        <h3>🎨 Estética</h3>
+                        <p>Design limpo e profissional que valoriza a imagem principal e cria uma hierarquia visual clara.</p>
+                    </div>
+                    <div class="demo-feature">
+                        <h3>📊 Performance</h3>
+                        <p>Redução significativa no tempo de carregamento e melhor experiência em dispositivos móveis.</p>
+                    </div>
+                    <div class="demo-feature">
+                        <h3>♿ Acessibilidade</h3>
+                        <p>Navegação completa por teclado, leitores de tela e suporte a preferências de movimento reduzido.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Scripts -->
+    <script src="modern-navigation.js"></script>
+    
+    <style>
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 6px;
+            background: var(--color-primary);
+            color: white;
+            padding: 8px;
+            text-decoration: none;
+            border-radius: 4px;
+            z-index: 10000;
+        }
+        
+        .skip-link:focus {
+            top: 6px;
+        }
+        
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+    </style>
+</body>
+</html>

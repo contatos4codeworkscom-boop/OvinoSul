@@ -1,0 +1,469 @@
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="OvinoSul - Seu guia completo para criação de ovinos no Rio Grande do Sul. Calendário de vacinação, perfis de raças e dicas práticas para produtores.">
+    <meta name="keywords" content="ovinos, Rio Grande do Sul, vacinação, raças, criação, pecuária, RS">
+    <meta name="author" content="OvinoSul">
+    <title>OvinoSul - Criação de Ovinos no Rio Grande do Sul</title>
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="hero.jpg" as="image">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"></noscript>
+    
+    <!-- DNS prefetch for external resources -->
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="modern-navigation.css">
+    <link rel="stylesheet" href="hero.css">
+    <link rel="stylesheet" href="features.css">
+    <link rel="stylesheet" href="buttons.css">
+    <link rel="stylesheet" href="mobile.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    
+    <!-- Web App Manifest -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#2563eb">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="OvinoSul - Criação de Ovinos no Rio Grande do Sul">
+    <meta property="og:description" content="Seu guia completo para criação de ovinos no RS. Calendário de vacinação, perfis de raças e dicas práticas.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ovinosul.com">
+    <meta property="og:image" content="https://ovinosul.com/hero.jpg">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="OvinoSul - Criação de Ovinos no Rio Grande do Sul">
+    <meta name="twitter:description" content="Seu guia completo para criação de ovinos no RS. Calendário de vacinação, perfis de raças e dicas práticas.">
+    <meta name="twitter:image" content="https://ovinosul.com/hero.jpg">
+    
+    <!-- Additional SEO and Performance -->
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
+    <link rel="canonical" href="https://ovinosul.com/">
+    
+    <!-- PWA and Mobile optimization -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="OvinoSul">
+    
+    <!-- Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "OvinoSul",
+        "description": "Guia completo para criação de ovinos no Rio Grande do Sul",
+        "url": "https://ovinosul.com",
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://ovinosul.com/?search={search_term_string}",
+            "query-input": "required name=search_term_string"
+        },
+        "author": {
+            "@type": "Organization",
+            "name": "OvinoSul"
+        },
+        "keywords": "ovinos, Rio Grande do Sul, vacinação, raças, criação, pecuária, RS, ovinocultura"
+    }
+    </script>
+</head>
+<body>
+    <!-- Skip to main content for accessibility -->
+    <a href="#main" class="skip-link" aria-label="Pular para o conteúdo principal">Pular para o conteúdo</a>
+    
+    <!-- Modern Navigation -->
+    <nav class="modern-navigation" role="navigation" aria-label="Navegação principal">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h1>OvinoSul</h1>
+            </div>
+            
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link active">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                            <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                            <polyline points="9,22 9,12 15,12 15,22"/>
+                        </svg>
+                        Home
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="racas.html" class="nav-link">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                            <path d="M12 2c-1.5 0-3 1-3 3v2c0 1 .5 2 1.5 2.5L12 11l1.5-1.5c1-.5 1.5-1.5 1.5-2.5V5c0-2-1.5-3-3-3z"/>
+                            <path d="M12 11c-3 0-5.5 2-7 5 1.5 3 4 5 7 5s5.5-2 7-5c-1.5-3-4-5-7-5z"/>
+                            <circle cx="12" cy="16" r="3"/>
+                        </svg>
+                        Raças
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="vacinas.html" class="nav-link">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                            <line x1="16" y1="2" x2="16" y2="6"/>
+                            <line x1="8" y1="2" x2="8" y2="6"/>
+                            <line x1="3" y1="10" x2="21" y2="10"/>
+                        </svg>
+                        Vacinas
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#sobre" class="nav-link">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                            <circle cx="12" cy="12" r="10"/>
+                            <path d="m9,12 2,2 4-4"/>
+                        </svg>
+                        Sobre
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contato" class="nav-link">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                            <polyline points="22,6 12,13 2,6"/>
+                        </svg>
+                        Contato
+                    </a>
+                </li>
+            </ul>
+            
+            <button class="mobile-menu-btn" aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobile-menu">
+            <ul class="mobile-menu-list">
+                <li class="mobile-menu-item">
+                    <a href="#home" class="mobile-menu-link">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                            <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                            <polyline points="9,22 9,12 15,12 15,22"/>
+                        </svg>
+                        Home
+                    </a>
+                </li>
+                <li class="mobile-menu-item">
+                    <a href="racas.html" class="mobile-menu-link">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                            <path d="M12 2c-1.5 0-3 1-3 3v2c0 1 .5 2 1.5 2.5L12 11l1.5-1.5c1-.5 1.5-1.5 1.5-2.5V5c0-2-1.5-3-3-3z"/>
+                            <path d="M12 11c-3 0-5.5 2-7 5 1.5 3 4 5 7 5s5.5-2 7-5c-1.5-3-4-5-7-5z"/>
+                            <circle cx="12" cy="16" r="3"/>
+                        </svg>
+                        Raças de Ovinos
+                    </a>
+                </li>
+                <li class="mobile-menu-item">
+                    <a href="vacinas.html" class="mobile-menu-link">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                            <line x1="16" y1="2" x2="16" y2="6"/>
+                            <line x1="8" y1="2" x2="8" y2="6"/>
+                            <line x1="3" y1="10" x2="21" y2="10"/>
+                        </svg>
+                        Calendário de Vacinas
+                    </a>
+                </li>
+                <li class="mobile-menu-item">
+                    <a href="#sobre" class="mobile-menu-link">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                            <circle cx="12" cy="12" r="10"/>
+                            <path d="m9,12 2,2 4-4"/>
+                        </svg>
+                        Sobre o Projeto
+                    </a>
+                </li>
+                <li class="mobile-menu-item">
+                    <a href="#contato" class="mobile-menu-link">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                            <polyline points="22,6 12,13 2,6"/>
+                        </svg>
+                        Contato
+                    </a>
+                </li>
+                <li class="mobile-menu-item">
+                    <a href="#origem" class="mobile-menu-link">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                            <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                            <path d="M2 17l10 5 10-5"/>
+                            <path d="M2 12l10 5 10-5"/>
+                        </svg>
+                        Origem e História
+                    </a>
+                </li>
+                <li class="mobile-menu-item">
+                    <a href="#guias" class="mobile-menu-link">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                            <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>
+                            <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
+                        </svg>
+                        Guias Práticos
+                    </a>
+                </li>
+                <li class="mobile-menu-item">
+                    <a href="#recursos" class="mobile-menu-link">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                            <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+                        </svg>
+                        Recursos
+                    </a>
+                </li>
+                <li class="mobile-menu-item">
+                    <a href="#produtores" class="mobile-menu-link">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                            <circle cx="9" cy="7" r="4"/>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                        </svg>
+                        Para Produtores
+                    </a>
+                </li>
+                <li class="mobile-menu-item">
+                    <a href="#novidades" class="mobile-menu-link">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                            <polygon points="13,2 3,14 12,14 11,22 21,10 12,10 13,2"/>
+                        </svg>
+                        Novidades 2025
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <main id="main" role="main">
+        <section class="hero" id="home" role="banner">
+            <div class="hero-background">
+                <img src="hero.jpg" alt="Paisagem dos pampas gaúchos com rebanho de ovinos ao amanhecer, mostrando a beleza natural do Rio Grande do Sul" class="hero-image" loading="eager" decoding="async">
+                <div class="hero-overlay"></div>
+            </div>
+            
+            <div class="hero-floating-elements" aria-hidden="true">
+                <div class="floating-element"></div>
+                <div class="floating-element"></div>
+                <div class="floating-element"></div>
+                <div class="floating-element"></div>
+                <div class="floating-element"></div>
+            </div>
+            
+            <div class="hero-content">
+                <div class="container">
+                    <div class="hero-text">
+                        <h1 class="hero-headline">OvinoSul: Seu guia de manejo de ovinos no Rio Grande do Sul</h1>
+                        <p class="hero-subheadline">Calendário de vacinação regional, perfis de raças locais e dicas práticas para iniciantes e produtores experientes do pampa gaúcho.</p>
+                        
+                        <div class="hero-actions">
+                            <a href="racas.html" class="btn btn-primary" aria-label="Explorar perfis detalhados das raças de ovinos">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                    <path d="M12 2c-1.5 0-3 1-3 3v2c0 1 .5 2 1.5 2.5L12 11l1.5-1.5c1-.5 1.5-1.5 1.5-2.5V5c0-2-1.5-3-3-3z"/>
+                                    <path d="M12 11c-3 0-5.5 2-7 5 1.5 3 4 5 7 5s5.5-2 7-5c-1.5-3-4-5-7-5z"/>
+                                    <circle cx="12" cy="16" r="3"/>
+                                </svg>
+                                Explorar Raças
+                            </a>
+                        </div>
+                        
+                        <div class="hero-search" role="search">
+                            <div class="search-wrapper">
+                                <label for="hero-search-input" class="sr-only">Buscar conteúdo do site</label>
+                                <input 
+                                    type="search" 
+                                    id="hero-search-input"
+                                    class="search-input" 
+                                    placeholder="Buscar raça, vacina ou dica…"
+                                    aria-describedby="search-description"
+                                >
+                                <span id="search-description" class="sr-only">Digite sua pesquisa e pressione Enter ou clique no botão de busca</span>
+                                <button class="search-btn" type="submit" aria-label="Executar busca">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                        <circle cx="11" cy="11" r="8"></circle>
+                                        <path d="m21 21-4.35-4.35"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="scroll-indicator" role="button" tabindex="0" aria-label="Rolar para próxima seção">
+                <p class="scroll-indicator-text">Explore</p>
+                <div class="scroll-indicator-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                        <path d="M7 13l3 3 7-7"/>
+                        <path d="M12 17V3"/>
+                    </svg>
+                </div>
+            </div>
+        </section>
+
+        <section class="features" id="features" role="region" aria-labelledby="features-title">
+            <div class="container">
+                <header class="features-header">
+                    <h2 id="features-title" class="features-title">O que você encontra aqui</h2>
+                    <p class="features-subtitle">Ferramentas e informações pensadas especialmente para o criador gaúcho, baseadas nas particularidades do nosso clima e território.</p>
+                </header>
+
+                <div class="features-grid">
+                    <article class="feature-card">
+                        <div class="feature-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 2c-1.5 0-3 1-3 3v2c0 1 .5 2 1.5 2.5L12 11l1.5-1.5c1-.5 1.5-1.5 1.5-2.5V5c0-2-1.5-3-3-3z"/>
+                                <path d="M12 11c-3 0-5.5 2-7 5 1.5 3 4 5 7 5s5.5-2 7-5c-1.5-3-4-5-7-5z"/>
+                                <circle cx="12" cy="16" r="3"/>
+                            </svg>
+                        </div>
+                        <h3 class="feature-title">Perfis de Raças</h3>
+                        <p class="feature-description">Fichas completas das principais raças ovinas com dados sobre adaptação ao clima gaúcho, produtividade e características regionais.</p>
+                        <a href="racas.html" class="feature-link">
+                            Explorar raças
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 12h14"/>
+                                <path d="M12 5l7 7-7 7"/>
+                            </svg>
+                        </a>
+                    </article>
+
+                    <article class="feature-card">
+                        <div class="feature-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                                <line x1="16" y1="2" x2="16" y2="6"/>
+                                <line x1="8" y1="2" x2="8" y2="6"/>
+                                <line x1="3" y1="10" x2="21" y2="10"/>
+                            </svg>
+                        </div>
+                        <h3 class="feature-title">Calendário de Vacinas</h3>
+                        <p class="feature-description">Cronograma de vacinação específico para o Rio Grande do Sul, com doses, intervalos e épocas ideais organizados por categoria.</p>
+                        <a href="vacinas.html" class="feature-link">
+                            Ver calendário
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 12h14"/>
+                                <path d="M12 5l7 7-7 7"/>
+                            </svg>
+                        </a>
+                    </article>
+
+                    <article class="feature-card">
+                        <div class="feature-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                                <polyline points="14,2 14,8 20,8"/>
+                                <line x1="16" y1="13" x2="8" y2="13"/>
+                                <line x1="16" y1="17" x2="8" y2="17"/>
+                            </svg>
+                        </div>
+                        <h3 class="feature-title">Guias Práticos</h3>
+                        <p class="feature-description">Dicas de manejo, alimentação e cuidados específicos para o clima do Rio Grande do Sul, organizados por temas práticos.</p>
+                        <a href="#guias" class="feature-link">
+                            Ver guias
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 12h14"/>
+                                <path d="M12 5l7 7-7 7"/>
+                            </svg>
+                        </a>
+                    </article>
+                </div>
+
+                <div class="features-stats">
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <span class="stat-number">15+</span>
+                            <p class="stat-label">Raças Catalogadas</p>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">50+</span>
+                            <p class="stat-label">Vacinas Organizadas</p>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">100%</span>
+                            <p class="stat-label">Focado no RS</p>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">2025</span>
+                            <p class="stat-label">Sempre Atualizado</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="features-cta">
+                    <h3 class="cta-title">Pronto para começar?</h3>
+                    <p class="cta-description">Explore nossos recursos e torne-se um criador de ovinos mais preparado e bem-sucedido no Rio Grande do Sul.</p>
+                    <div class="cta-buttons">
+                        <a href="racas.html" class="btn btn-primary btn-lg">Explorar Raças</a>
+                        <a href="vacinas.html" class="btn btn-secondary btn-lg">Ver Calendário</a>
+                    </div>
+                </div>
+
+
+            </div>
+        </section>
+    </main>
+
+    <!-- Screen reader only styles -->
+    <style>
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 6px;
+            background: var(--color-primary);
+            color: white;
+            padding: 8px;
+            text-decoration: none;
+            border-radius: 4px;
+            z-index: 10000;
+        }
+        
+        .skip-link:focus {
+            top: 6px;
+        }
+        
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+    </style>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+    <script src="modern-navigation.js"></script>
+    <script src="advanced-scroll-controller.js"></script>
+    
+    <!-- Service Worker Registration (optional) -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('/sw.js')
+                .then(function(registration) {
+                    console.log('SW registered: ', registration);
+                }).catch(function(registrationError) {
+                    console.log('SW registration failed: ', registrationError);
+                });
+            });
+        }
+    </script>
+</body>
+</html>

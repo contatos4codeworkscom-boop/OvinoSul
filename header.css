@@ -1,0 +1,82 @@
+/* Modern Minimalist Header 2025 */
+
+.header {
+    position: fixed;
+    top: 40px;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--color-border-light);
+    transition: all var(--transition-normal);
+    will-change: transform, background-color;
+}
+
+.header.scrolled {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    box-shadow: var(--shadow-sm);
+}
+
+.nav-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: var(--header-height);
+    position: relative;
+}
+
+/* Logo */
+.logo {
+    z-index: 10;
+}
+
+.logo h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-text);
+    letter-spacing: -0.02em;
+    transition: color var(--transition-fast);
+}
+
+.logo h1:hover {
+    color: var(--color-primary);
+}
+
+/* Responsive adjustments for mobile */
+@media (max-width: 767px) {
+    .header {
+        top: 36px;
+    }
+}
+
+/* Tablet adjustments */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .header {
+        top: 42px;
+    }
+    
+    .logo h1 {
+        font-size: 1.6rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .header {
+        top: 44px;
+    }
+    
+    .logo h1 {
+        font-size: 1.75rem;
+    }
+}
+
+/* Extra Large Desktop */
+@media (min-width: 1280px) {
+    .container {
+        padding: 0 var(--space-6);
+    }
+}
